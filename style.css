@@ -1,0 +1,94 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: rgb(31,96,50);
+    background: radial-gradient(circle, rgba(31,96,50,1) 0%, rgba(9,48,9,1) 100%, rgba(41,119,62,1) 500%);
+}
+
+.contenedor{
+    width: 486px;
+    height: 458px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: -1px 1px 28px 7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 1px 28px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 1px 28px 7px rgba(0,0,0,0.75);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 90%;
+}
+
+.foto{
+    margin-top: 45px;
+    width: 190px;
+    height: 190px;
+    border-radius: 24px;
+    background-image: url(/images/user.png);
+    background-size: cover;
+}
+.foto:hover{
+    cursor: pointer;
+    background-image: url(/images/user2.png);
+    transition-duration: 500ms;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descripcion{
+    font-size: 1rem;
+    width: 75%;
+    text-align: center;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+button{
+    cursor: pointer;
+    background-color: #29773e;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    align-items: center;
+    width: 170px;
+    height: 55px;
+}
+button:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    background: rgb(41,119,62);
+    background: linear-gradient(355deg, rgba(41,119,62,1) 0%, rgba(31,96,50,1) 50%, rgba(9,48,9,1) 100%);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+button:active{
+    transform: translate(-2px);
+}
+.img{
+    width: 1rem;
+    filter: invert();   /* No lo voy a buscar de otro color.. ya estoy cansao */
+}
+
+@media (max-width:1024px) {
+    body{
+        font-size: 1rem;
+    }
+    .contenedor{
+        width: auto;
+    }
+    .botones{
+        gap: 15px;
+    }
+}
